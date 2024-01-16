@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ClassWork</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="contacts">
+        <item>6578875676</item>
+        <item>3456789</item>
+        <item>23546786</item>
+        <item>3456234789</item>
+    </string-array>
 </resources>
