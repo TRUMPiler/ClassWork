@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LayoutControls"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <EditText
+        android:id="@+id/txtEnno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter enrollment no..."
+        android:inputType="number"
+        android:maxLength="10"
+        android:textColor="@android:color/holo_blue_light"
+        android:textColorHint="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:enabled="true"
+        android:visibility="visible"
+        android:fontFamily="cursive"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPassword"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:ems="30"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAddress"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="5"
+        android:hint="Address"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/rgGender"
+        android:orientation="horizontal">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/rbMale"
+        android:text="Male"
+        android:checked="true"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/rbFemale"
+        android:text="Female"
+        />
+    </RadioGroup>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spCities"
+        android:entries="@array/citiies"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkCondition"
+        android:text="Please Accept the terms and conditions"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:text="Register"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+</LinearLayout>
+</ScrollView>
