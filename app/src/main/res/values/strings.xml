@@ -8,4 +8,5 @@
         <item>23546786</item>
         <item>3456234789</item>
     </string-array>
+    <string name="btnRegitser">Registration</string>
 </resources>
