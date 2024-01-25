@@ -12,8 +12,8 @@
 
     <ImageView
         android:layout_width="300dp"
-        android:layout_height="600dp"
-        android:src="@drawable/ic_launcher_background"/>
+        android:layout_height="200dp"
+        android:src="@drawable/wall"/>
 
     <EditText
         android:id="@+id/txtEnno"
@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spCities"
-        android:entries="@array/citiies"/>
+        android:entries="@array/cities"/>
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +82,51 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnRegister"
         android:text="Register"
+        android:drawableLeft="@drawable/baseline_power_settings_new_24"
         android:backgroundTint="@android:color/holo_blue_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imgbtn"
+        android:src="@drawable/wall"
+        />
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbvisible"
+        android:textOff="OFF"
+        android:textOn="On"
+        />
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swvisible"
+        android:textOff="Off"
+        android:textOn="on"/>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/actvCity"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtOutput"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkAndroid"
+        android:text="Android"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkPython"
+        android:text="Python"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkPHP"
+        android:text="PHP"/>
 </LinearLayout>
 </ScrollView>

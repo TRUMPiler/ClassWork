@@ -13,8 +13,8 @@
         android:theme="@style/Theme.ClassWork"
         tools:targetApi="31">
         <activity
-            android:name=".Fragmentexample2"
-            android:exported="true">
+            android:name=".AlertActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,22 +22,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Fragmentwithlists"
+            android:name=".Fragmentexample2"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".ActivityandFragments"
+            android:name=".Fragmentwithlists"
             android:exported="true"></activity>
+        <activity
+            android:name=".ActivityandFragments"
+            android:exported="true" />
         <activity
             android:name=".Jan09_child"
             android:exported="false" />
         <activity
             android:name=".Jan09"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
