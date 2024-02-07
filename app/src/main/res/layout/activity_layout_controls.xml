@@ -71,7 +71,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spCities"
-        android:entries="@array/cities"/>
+        android:entries="@array/cities"
+        />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

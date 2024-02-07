@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class AlertActivity extends AppCompatActivity {
 
@@ -27,52 +28,15 @@ public class AlertActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alert);
         initializecomponent();
-    }
-
-    @SuppressLint("RestrictedApi")
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
-        if(menu instanceof MenuBuilder) {
-            MenuBuilder m = (MenuBuilder) menu;
-            m.setOptionalIconsVisible(true);
-        }
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if(id == R.id.contactus)
-        {
-
-        }
-        return super.onOptionsItemSelected(item);
+        Buttonclicks();
     }
 
     private void initializecomponent(){
         btnAlertDialog=findViewById(R.id.btnAlertDialog);
-        lstContacts = findViewById(R.id.lstContacts);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
-                android.R.layout.simple_list_item_1,contacts);
-        lstContacts.setAdapter(adapter);
-
-        registerForContextMenu(lstContacts);
     }
 
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
-        super.onCreateContextMenu(menu, v, menuInfo);
-    }
 
-    @Override
-    public boolean onContextItemSelected(@NonNull MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
-        int position = info.position;
-        return super.onContextItemSelected(item);
-    }
 
     private void Buttonclicks(){
         btnAlertDialog.setOnClickListener(new View.OnClickListener() {
@@ -86,12 +50,14 @@ public class AlertActivity extends AppCompatActivity {
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(),"Dialog Called stop operation",Toast.LENGTH_LONG).show();
                         finish();
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(AlertActivity.this, "Dialog Cancelled", Toast.LENGTH_SHORT).show();
                         dialog.cancel();
                     }
                 });
