@@ -2,6 +2,21 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="AlertActivity">
+        <State />
+      </entry>
+      <entry key="Jan09_child">
+        <State />
+      </entry>
+      <entry key="LayoutControls">
+        <State />
+      </entry>
+      <entry key="MainActivity">
+        <State />
+      </entry>
+      <entry key="SharedPreference">
+        <State />
+      </entry>
       <entry key="app">
         <State />
       </entry>

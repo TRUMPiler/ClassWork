@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,11 +16,11 @@
         android:theme="@style/Theme.ClassWork"
         tools:targetApi="31">
         <activity
-            android:name=".DashboardActivity"
+            android:name=".AddRecordActivity"
             android:exported="false" />
         <activity
-            android:name=".SharedPreference"
-            android:exported="true" >
+            android:name=".DatabaseActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,10 +28,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CustomListActivity"
+            android:name=".FileActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SharedPreference"
+            android:exported="false" />
+        <activity
+            android:name=".CustomListActivity"
+            android:exported="true" />
         <activity
             android:name=".MenuBar"
             android:exported="true">
