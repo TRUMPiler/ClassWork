@@ -17,6 +17,8 @@ public class DatabaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_database);
+        initialize();
+        Buttonclick();
     }
     private void initialize(){
         btnAdd=findViewById(R.id.btnAdd);

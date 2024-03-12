@@ -18,7 +18,8 @@ public class AddRecordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
-
+        initialize();
+        Buttonclick();
         db = new DbManager(this);
         db.open();
     }
@@ -36,6 +37,7 @@ btnSave.setOnClickListener(new View.OnClickListener() {
         long i = db.Addemployee(Empname,Contactno);
         if(i>0){
             Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_LONG);
+            Backhome();
         }
     }
 });
