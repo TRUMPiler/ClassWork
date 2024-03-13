@@ -15,5 +15,12 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lstEmp"/>
+        android:id="@+id/lstEmp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty"
+        android:text="No Records found!!!!"
+        android:textSize="20dp"/>
 </LinearLayout>

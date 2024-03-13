@@ -12,8 +12,9 @@ import android.widget.Toast;
 public class AddRecordActivity extends AppCompatActivity {
 
     EditText txtEmpname,txtContactno;
-    Button btnSave;
+    Button btnSave, btnDelete;
     DbManager db;
+    int ID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,22 +23,47 @@ public class AddRecordActivity extends AppCompatActivity {
         Buttonclick();
         db = new DbManager(this);
         db.open();
+        Intent i =getIntent();
+        if(i.getStringExtra("ID")!=null){
+           ID=Integer.parseInt(i.getStringExtra("ID"));
+           String Empname=i.getStringExtra("Empname");
+           String Contactno=i.getStringExtra("Contactno");
+           txtEmpname.setText(Empname);
+           txtContactno.setText(Contactno);
+           btnDelete.setVisibility(View.VISIBLE);
+        }
     }
     private void initialize(){
         txtEmpname=findViewById(R.id.txtEmpname);
         txtContactno=findViewById(R.id.txtContactno);
         btnSave=findViewById(R.id.btnSave);
+        btnDelete=findViewById(R.id.btnDelete);
     }
     private void Buttonclick(){
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db.Delete(ID);
+                Backhome();
+            }
+        });
 btnSave.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         String Empname=txtEmpname.getText().toString();
         String Contactno=txtContactno.getText().toString();
-        long i = db.Addemployee(Empname,Contactno);
-        if(i>0){
-            Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_LONG);
-            Backhome();
+        if(ID==0) {
+            long i = db.Addemployee(Empname, Contactno);
+            if (i > 0) {
+                Toast.makeText(getApplicationContext(), "Inserted", Toast.LENGTH_LONG);
+                Backhome();
+            }
+        }else{
+                int i=db.Update(ID,Empname,Contactno);
+                if(i>0){
+                    Toast.makeText(getApplicationContext(), "Updated", Toast.LENGTH_LONG);
+                    Backhome();
+                }
         }
     }
 });
