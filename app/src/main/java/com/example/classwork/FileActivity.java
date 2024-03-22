@@ -40,7 +40,7 @@ public class FileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    FileOutputStream fos= openFileOutput("File1",MODE_APPEND);
+                    FileOutputStream fos= openFileOutput("TASKS",MODE_APPEND);
                     fos.write(txtfilename.getText().toString().getBytes());
                     fos.close();
                     Toast.makeText(FileActivity.this,"File is created",Toast.LENGTH_LONG).show();
