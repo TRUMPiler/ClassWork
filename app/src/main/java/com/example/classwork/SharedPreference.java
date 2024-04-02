@@ -56,6 +56,7 @@ public class SharedPreference extends AppCompatActivity {
                     e.apply();
                     Intent i = new Intent(getApplicationContext(),DashboardActivity.class);
                     startActivity(i);
+
                 }
             }
         });
